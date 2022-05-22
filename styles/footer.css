@@ -1,0 +1,82 @@
+.footer {
+    background: #CD8282;
+    padding: 50px 0px;
+}
+
+.footer__nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nav__logo {
+    width: 125px;
+    height: 40px;
+
+    cursor: pointer;
+}
+
+.footer__nav__elements-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer__nav-element {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    cursor: pointer;
+
+    transition: color .2s ease;
+}
+
+.footer__nav-element:hover {
+    color: rgb(0, 0, 0);
+}
+
+.nav-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__icon {
+    cursor: pointer;
+}
+
+.footer__about-company {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+/* -------------- */
+
+@media (min-width: 650px) and (max-width: 1049px) {
+    .footer__nav__elements-container {
+        gap: 15px;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 649px) {
+    .footer__nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    .footer__nav__elements-container {
+        gap: 15px;
+    }
+}

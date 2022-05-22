@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMX</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/advantages.css">
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <div id="app">
+        <div class="first-page" v-if="currentPage === 'home'">
+            <header class="header">
+                <div class="container">
+                    <div class="header__nav">
+                        <img src="./assets/img/logo-black.svg" @click="currentPage = 'home'" id="header" alt="" class="nav__logo">
+                        <nav class="nav__elements-container">
+                            <a class="nav-element" href="#advantage">advantages</a>
+                            <a class="nav-element" href="#product">products</a>
+                            <a class="nav-element" @click="currentPage = 'aboutus'" >about us</a>
+                        </nav>
+                        <div class="nav-icons-container">
+                            <img src="./assets/img/cart-black.svg" @click="currentPage = 'cart'" alt="" class="nav__icon">
+                            <img src="./assets/img/login-black.svg" @click="currentPage = 'log'" alt="" class="nav__icon">
+                            
+                        </div>
+                    </div>
+        
+                    <div class="header__perfomance">
+                        <div class="perfomance__slogan-container">
+                            <h1 class="slogan">make yourself <br> smarter</h1>
+                            <p class="slogan-inf">buy our the greatest product in the world <br> and fill how we can make yourself smarter</p>
+                            <button class="btn-black perfomance__btn">get it</button>
+                        </div>
+                        <img src="./assets/img/perfomance.png" alt="" class="perfomance-img">
+                    </div>
+                </div>
+            </header>
+        
+            <section class="advantages" id="advantage">
+                <div class="container">
+                    <h2 class="advantages-title">- Our advantages</h2>
+                    <div class="advantages-container">
+                        <div class="advantage">
+                            <img src="./assets/img/trust.svg" alt="" class="advantage-icon">
+                            <div class="advantage-inf-container">
+                                <h3 class="advantage-name">TRUST</h3>
+                                <p class="advantage-inf">Everyone chooses us</p>
+                            </div>
+                        </div>
+                        <div class="advantage">
+                            <img src="./assets/img/worldwide.svg" alt="" class="advantage-icon">
+                            <div class="advantage-inf-container">
+                                <h3 class="advantage-name">WORLD WIDE</h3>
+                                <p class="advantage-inf">Our stores are all over the world</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="products" id="product">
+                <div class="container">
+                    <h3 class="products-title">- Our products</h3>
+                    <div class="products-container">
+                        <div class="product-container">
+                            <img src="./assets/img/robot-helper.png" alt="" class="product-img">
+                            <div class="product-inf-container">
+                                <a class="product-name" @click="currentPage = 'product'">Robot Helper</a>
+                                <p class="product-inf">Youngsters aren’t the only ones who get the latest high-tech gadgets. Sometime in the next decade or two, homebound retirees could be early adopters of an important new technology: the home-help robot.</p>
+                                <p class="product-price">14999 $</p>
+                                <button class="btn-black">add to cart</button>
+                            </div>
+                        </div>
+                        <div class="product-container">
+                            <img src="./assets/img/robot-cleaner.png" alt="" class="product-img">
+                            <div class="product-inf-container">
+                                <a class="product-name">Robot Cleaner</a>
+                                <p class="product-inf">The Smart robot vacuum cleaner allows you to do stuff you love in your free time while the robot does all cleaning of your floor. This cleaner does not make a louder noise, so you won't even notice it.</p>
+                                <p class="product-price">9999 $</p>
+                                <button class="btn-black">add to cart</button>
+                            </div>
+                        </div>
+                        <div class="product-container">
+                            <img src="./assets/img/computer.png" alt="" class="product-img">
+                            <div class="product-inf-container">
+                                <a class="product-name">Computer</a>
+                                <p class="product-inf">A computer is a digital electronic machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically.</p>
+                                <p class="product-price">29999 $</p>
+                                <button class="btn-black">add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__nav">
+                        <img src="./assets/img/logo-white.svg" @click="currentPage = 'home'" alt="" class="nav__logo">
+                        <nav class="footer__nav__elements-container">
+                            <a class="footer__nav-element">advantages</a>
+                            <a class="footer__nav-element">products</a>
+                            <a class="footer__nav-element">about us</a>
+                        </nav>
+                        <div class="nav-icons-container">
+                            <img src="./assets/img/cart-white.svg" @click="currentPage = 'cart'" alt="" class="nav__icon">
+                            <img src="./assets/img/login-white.svg" @click="currentPage = 'log'" alt="" class="nav__icon">                           
+                        </div>
+                    </div>
+                    <p class="footer__about-company">© The LIMX Company, every rules are prottected</p>
+                </div>
+            </footer>
+        </div>
+
+        <div class="second-page" v-if="currentPage === 'cart'">
+            <header class="header">
+                <div class="container">
+                    <div class="header__nav">
+                        <img src="./assets/img/logo-black.svg" @click="currentPage = 'home'" alt="" class="nav__logo">
+                    </div>
+        
+                    <div class="header__perfomance">
+                        <div class="perfomance__slogan-container">
+                            <h1 class="slogan">Cart is empty</h1>
+                            <button class="btn-black perfomance__btn" @click="currentPage = 'home'">go back</button>
+                        </div>
+                        <img src="./assets/img/cart-img.png" alt="" class="perfomance-img">
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="third-page" v-if="currentPage === 'log'">
+            <div class="login-container">
+                <img src="./assets/img/logo-white.svg" @click="currentPage = 'home'" alt="" class="login-logo">
+                <form action="">
+                    <label for="#mail">mail</label>
+                    <input type="mail" id="mail" placeholder="example@gmail.com">
+                    <label for="#password">password</label>
+                    <input type="password" placeholder="write here" id="password">
+                </form>
+                <div class="login-btn-container">
+                    <button class="btn-white" @click="currentPage = 'home'">log in</button>
+                    <p class="login-reg">Forgot the password? <a @click="currentPage = 'forget'">push it</a></p>
+                </div>
+                <p class="login-reg">Dont have an account? <a @click="currentPage = 'reg'">push it</a></p>
+            </div>
+        </div>
+
+        <div class="third-page" v-if="currentPage === 'forget'">
+            <div class="login-container">
+                <img src="./assets/img/logo-white.svg" @click="currentPage = 'home'" alt="" class="login-logo">
+                <form action="">
+                    <label for="#mail">mail</label>
+                    <input type="mail" id="mail" placeholder="example@gmail.com">
+                    <label for="#password">write here new password</label>
+                    <input type="password" placeholder="write here" id="password">
+                </form>
+                <div class="login-btn-container">
+                    <button class="btn-white" @click="currentPage = 'home'">get it</button>
+                </div>               
+            </div>
+        </div>
+
+        <div class="third-page" v-if="currentPage === 'reg'">
+            <div class="login-container">
+                <img src="./assets/img/logo-white.svg" @click="currentPage = 'home'" alt="" class="login-logo">
+                <form action="">
+                    <label for="#mail">mail</label>
+                    <input type="mail" id="mail" placeholder="example@gmail.com">
+                    <label for="#password">password</label>
+                    <input type="password" placeholder="write here" id="password">
+                    <label for="#password">confirm password</label>
+                    <input type="password" placeholder="write here" id="password">
+                    <div class="radio-container">
+                        <input type="radio">
+                        <p>I accept the conditions for the processing of personal data</p>
+                    </div>
+                </form>
+                <div class="login-btn-container">
+                    <button class="btn-white" @click="currentPage = 'home'">reg in</button>
+                    <p class="login-reg">already have an accaunt? <a @click="currentPage = 'log'">push it</a></p>
+                </div>               
+            </div>
+        </div>
+
+        <div class="fourth-page" v-if="currentPage === 'product'">
+            <header class="header">
+                <div class="container">
+                    <div class="header__nav">
+                        <img src="./assets/img/logo-black.svg" @click="currentPage = 'home'" id="header" alt="" class="nav__logo">
+                        <nav class="nav__elements-container">
+                            <a class="nav-element" href="#advantage">advantages</a>
+                            <a class="nav-element" href="#product">products</a>
+                            <a class="nav-element">about us</a>
+                        </nav>
+                        <div class="nav-icons-container">
+                            <img src="./assets/img/cart-black.svg" @click="currentPage = 'cart'" alt="" class="nav__icon">
+                            <img src="./assets/img/login-black.svg" @click="currentPage = 'log'" alt="" class="nav__icon">
+                            
+                        </div>
+                    </div>
+        
+                    <div class="header__perfomance">
+                        <div class="perfomance__slogan-container">
+                            <h1 class="slogan">Robot Helper - 14999$</h1>
+                            <p class="slogan-inf">THREE BRUSH TYPES. ONE POWERFUL CLEAN: Tri-Brush System combines side brushes, channel brushes, and a multi-surface brushroll to handle debris on all surfaces.
+                                COMPLETELY INTEGRATED IN YOUR HOME: Shark ION Robot senses ledges and stairs, avoids damaging furniture and walls, and maneuvers around potential stuck situations, truly knowing your home
+                                CLEAN FROM YOUR PHONE: SharkClean app lets you start and stop cleaning and schedule your robot to clean whenever you want.
+                                EASY VOICE CONTROL: Use Amazon Alexa or Google Assistant to easily make the robot clean at your command in your connected home.
+                                120 MINUTE RUNTIME: Whole-home, floor-to-carpet cleaning for up to 2 hours.
+                                BUILT, TESTED, AND PERFECTED: Shark puts their robots through rigorous testing, performing thousands of hours of real-life use to give you a reliable, ultra-powerful clean.
+                                WHAT'S INCLUDED: Shark ION Robot Vacuum, Charging Dock, (2) Side Brushes & Filter.</p>
+                            <button class="btn-black perfomance__btn">add to cart</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <div class="fifth-page" v-if="currentPage === 'aboutus'">
+            <header class="header">
+                <div class="container">
+                    <div class="header__nav">
+                        <img src="./assets/img/logo-black.svg" @click="currentPage = 'home'" id="header" alt="" class="nav__logo">
+                        <nav class="nav__elements-container">
+                            <a class="nav-element" @click="currentPage = 'home'">advantages</a>
+                            <a class="nav-element" @click="currentPage = 'home'">products</a>
+                            <a class="nav-element">about us</a>
+                        </nav>
+                        <div class="nav-icons-container">
+                            <img src="./assets/img/cart-black.svg" @click="currentPage = 'cart'" alt="" class="nav__icon">
+                            <img src="./assets/img/login-black.svg" @click="currentPage = 'log'" alt="" class="nav__icon">
+                            
+                        </div>
+                    </div>
+        
+                    <div class="header__perfomance">
+                        <div class="perfomance__slogan-container">
+                            <h1 class="slogan">OUR STORY</h1>
+                            <p class="slogan-inf">Commonly known as the Terminator, the character is also given more specific designations, which help distinguish it from other mass-produced Terminators seen in each of the sequels. The end credits of the first three Terminator films list Arnold Schwarzenegger's characters as simply "Terminator", while in Terminator Genisys, he is credited as "Guardian". In Terminator Salvation, the character is credited and referred to as "T-800", while in Terminator: Dark Fate, the character is credited as "T-800 / Carl".
+
+                                In the first two films and Dark Fate, the character is referred to as "Cyberdyne Systems Model 101". In Terminator 3: Rise of the Machines (T3), it is referred to as a "T-101". This name also occurs throughout the T2 novels. The name "T101" was used as early as 1991, in the Amstrad CPC and ZX Spectrum versions of the Terminator 2 computer game.[2][3] In the T2 Extreme Edition DVD, and the Terminator 2 video game,[clarification needed] he is referred to as an 800 series and a T-800.[4] Trailers and a deleted scene of Terminator 2: Judgment Day identify the Terminator specifically as a "Cyberdyne Systems Series 800 Model 101". The T3 DVD extras refer to him as an "850 series Model 101", a "T-850", and a "T-101".[citation needed] The novelization of the third film also refers to the character as T-850, described as a newer, upgraded version of the T-800.[5] Terminator Salvation has the first on-screen usage of the term T-800, a name that is also used in Terminator Genisys.[6] Additionally, in an early scene in Terminator Genisys, an automated voice at Skynet's facility refers to a younger version of the character as a "Model 101".
+                                
+                                Most of the merchandising for T2 and T3—both at the time of their releases and retroactively—used the T-800 and T-850 nomenclature, contributing to this designation having arguably the most popular and widely disseminated usage, especially in direct juxtaposition to the explicitly named T-600s and T-1000. Such merchandise included Action Masters miniatures, Cinemaquette statues, Sideshow Collectibles replicas, Hollywood Collectibles statuettes, ArtFX kits, Medicom figures, and products by Hot Toys,[citation needed] and McFarlane Toys.[7]
+                                
+                                The specific Terminator characters portrayed by Schwarzenegger are also called on-screen by several individual names or nicknames. In Terminator 2: Judgment Day, John Connor introduces the Model 101 to his mother's friends as his "Uncle Bob". In Terminator Genisys, Sarah Connor refers to the T-800 as "Pops". In Terminator: Dark Fate, the character goes by the name "Carl".</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+
+    <script src="./js/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+.header {
+    width: 100vw;
+    height: max-content;
+}
+
+/* ---- header-nav ---- */
+
+.header__nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    width: 125px;
+    height: 40px;
+
+    cursor: pointer;
+}
+
+.nav__elements-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-element {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #171717;
+    cursor: pointer;
+
+    transition: color .2s ease;
+}
+
+.nav-element:hover {
+    color: #CD8282;
+}
+
+.nav-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__icon {
+    cursor: pointer;
+}
+
+/* ---- header-perfomance ---- */
+
+.header__perfomance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.perfomance__slogan-container {
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.slogan {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    
+    /* MainText-colour */
+    
+    color: #171717;
+}
+
+.slogan-inf {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+
+    /* MainText-colour */
+
+    color: #171717;
+}
+
+/* ---- media ---- */
+
+    @media (min-width: 1050px) and (max-width: 1400px) { 
+    .perfomance__slogan-container {
+        gap: 25px;
+    }
+
+    .slogan {
+        font-size: 58px;
+        line-height: 58px;
+    }
+
+    .slogan-inf {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .perfomance-img {
+        width: 550px;
+        height: 550px;
+    }
+}
+
+    @media (min-width: 650px) and (max-width: 1049px) {
+    .nav__elements-container {
+        gap: 15px;
+    }
+
+    .perfomance__slogan-container {
+        gap: 20px;
+    }
+
+    .slogan {
+        font-size: 46px;
+        line-height: 46px;
+    }
+
+    .slogan-inf {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .perfomance-img {
+        display: none;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 649px) {
+    .header__nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__elements-container {
+        gap: 15px;
+    }
+
+    .perfomance__slogan-container {
+        gap: 20px;
+    }
+
+    .slogan {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .slogan-inf {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .perfomance-img {
+        display: none;
+    }
+}
+
+
+/* --------------- */
+.fourth-page .header {
+    margin-bottom: 100px;
+}
+
+.fifth-page .header {
+    margin-bottom: 100px;
+}

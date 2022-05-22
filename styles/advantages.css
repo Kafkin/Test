@@ -1,0 +1,116 @@
+.advantages {
+    background: #CD8282;
+    margin-top: 200px;
+    width: 100vw;
+    height: max-content;
+    padding: 50px 0px 100px 0px;
+}
+
+.advantages-title {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+
+    margin-bottom: 50px;
+}
+
+.advantages-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.advantage {
+    display: flex;
+    gap: 30px;
+}
+
+.advantage-icon {
+    width: 125px;
+    height: 125px;
+}
+
+.advantage-inf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advantage-name {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.advantage-inf {
+    font-family: 'Kanit';
+    font-style: normal; 
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+/* ---- media ---- */
+
+@media (min-width: 650px) and (max-width: 1049px) {
+    .advantages-container {
+        flex-wrap: wrap;   
+        gap: 40px;
+    }
+
+    .advantages-title {
+        font-size: 36px;
+    }
+
+    .advantage-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .advantage-name {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .advantage-inf {
+        font-size: 20px
+    }
+}
+
+@media (min-width: 350px) and (max-width: 649px) {
+    .advantages {
+        margin-top: 100px;
+    }
+
+    .advantages-container {
+        flex-wrap: wrap;   
+        gap: 30px;
+    }
+
+    .advantages-title {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .advantage-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .advantage-name {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .advantage-inf {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

@@ -1,0 +1,96 @@
+.third-page {
+    width: 100vw;
+    height: 100vh;
+    background: #CD8282;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-logo {
+    width: 400px;
+    height: 130px;
+    cursor: pointer;
+}
+.login-btn-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+input {
+    background: #CD8282;
+    border-bottom: 3px solid white;
+    outline:none;
+    padding: 5px 0px;
+    color: #FFFFFF;
+    
+}
+
+input::placeholder {
+    color: #ffdddd;
+}
+
+.login-reg {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.login-reg a {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    /* identical to box height */
+    cursor: pointer;
+
+    color: #171717;
+}
+
+.radio-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.radio-container p {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}

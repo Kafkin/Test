@@ -1,0 +1,133 @@
+.products {
+    width: 100vw;
+    padding: 100px 0px;
+}
+
+.products-title {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    color: #171717;
+    margin-bottom: 50px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.product-container {
+    display: flex;
+    gap: 30px;
+}
+
+.product-inf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-name {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+    
+    
+    /* MainText-colour */
+    transition: color 0.2s ease;
+    color: #171717;
+    cursor: pointer;
+}
+
+.product-name:hover {
+    color: #CD8282;
+}
+
+.product-inf {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+
+    /* MainText-colour */
+
+    color: #171717;
+}
+
+.product-price {
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height */
+
+
+    /* MainText-colour */
+
+    color: #171717;
+}
+
+/* ---- media ---- */
+
+@media (min-width: 650px) and (max-width: 1049px) {
+    /* .product-container {
+        flex-wrap: wrap;
+    } */
+
+    .product-img {
+        width: 350px;
+        height: 380px;
+    }
+
+    .product-inf-container {
+        gap: 2px;
+    }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-inf {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .product-price {
+        font-size: 28px
+    }
+}
+
+@media (min-width: 350px) and (max-width: 649px) {
+    .product-container {
+        flex-wrap: wrap;
+    }
+    .product-img {
+        width: 300px;
+        height: 330px;
+    }
+
+    .product-inf-container {
+        gap: 2px;
+    }
+
+    .product-name {
+        font-size: 24px;
+    }
+
+    .product-inf {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .product-price {
+        font-size: 28px
+    }
+}
