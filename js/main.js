@@ -29,7 +29,12 @@ const App = {
         amount: 1
       }],
 
-      arrayShoppingCart: []
+      arrayShoppingCart: [],
+
+      formLog: {
+        email: '',
+        password: ''
+      }
     }
   },
 
@@ -46,6 +51,14 @@ const App = {
     clear(product){
       const index = this.arrayShoppingCart.findIndex(el => el.title === product.title)
       this.arrayShoppingCart.splice(index, 1)
+    },
+
+    log(){
+      if(this.formLog.email.indexOf('@') == -1){
+        return
+      }else{
+        this.currentPage = 'home'
+      }
     }
   },
 

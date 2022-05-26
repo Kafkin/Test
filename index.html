@@ -138,16 +138,16 @@
         <div class="third-page" v-if="currentPage === 'log'">
             <div class="login-container">
                 <img src="./assets/img/logo-white.svg" @click="currentPage = 'home'" alt="" class="login-logo">
-                <form action="">
+                <form @submit.prevent="log">
                     <label for="mail">mail</label>
-                    <input type="email" id="mail" placeholder="example@gmail.com">
+                    <input type="email" id="mail" placeholder="example@gmail.com" v-model="formLog.email">
                     <label for="password">password</label>
-                    <input type="password" placeholder="write here" id="password">
+                    <input type="password" placeholder="write here" id="password" v-model="formLog.password">
+                    <div class="login-btn-container">
+                        <button class="btn-white" type="submit">log in</button>
+                        <p class="login-reg">Forgot the password? <a @click="currentPage = 'forget'">push it</a></p>
+                    </div>
                 </form>
-                <div class="login-btn-container">
-                    <button class="btn-white" @click="currentPage = 'home'">log in</button>
-                    <p class="login-reg">Forgot the password? <a @click="currentPage = 'forget'">push it</a></p>
-                </div>
                 <p class="login-reg">Dont have an account? <a @click="currentPage = 'reg'">push it</a></p>
             </div>
         </div>
