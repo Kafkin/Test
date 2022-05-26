@@ -60,6 +60,10 @@
     margin-top: 120px;
 }
 
+.header__perfomance_ups {
+    margin-bottom: 30px;
+}
+
 .perfomance__slogan-container {
     display: flex;
     flex-direction: column;
