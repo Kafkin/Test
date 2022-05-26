@@ -25,7 +25,6 @@
 }
 
 .perfomance__slogan-container_text{
-    margin-bottom: -45px;
     font-size: 28px !important;
 }
 
@@ -90,6 +89,14 @@
     color: #171717;
 }
 
+.product-price_ok{
+    line-height: 0px !important;
+}
+
+.product-price_ups{
+    white-space: nowrap;
+}
+
 /* ---- media ---- */
 
 @media (min-width: 650px) and (max-width: 1049px) {
@@ -144,5 +151,14 @@
 
     .product-price {
         font-size: 28px
+    }
+
+    .product-price_ok{
+        font-size: 14px !important;
+    }
+    
+    .btn-black {
+        padding: 0px 30px !important;
+        font-size: 20px !important;
     }
 }

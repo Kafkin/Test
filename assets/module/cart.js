@@ -6,8 +6,8 @@ export default {
         <a class="product-name" @click="currentPage = 'product'">{{ product.title }}</a>
         <p class="product-inf">{{ product.body }}</p>
         <span class="ups">
-          <p class="product-price">Amount: {{ product.amount }}</p>
-          <p class="product-price">Price: {{ product.amount * product.price }} $</p>
+          <p class="product-price product-price_ups">Amount: {{ product.amount }}</p>
+          <p class="product-price product-price_ups">Price: {{ product.amount * product.price }} $</p>
         </span>
         <span class="ups">
           <button class="btn-black" @click="product.amount++">+</button>
